@@ -39,15 +39,10 @@ jobs:
       run:
         working-directory: ./client
 
-    strategy:
-      matrix:
-        node-version: [14.21.3, 16.19.1, 18.15.0]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      run: npm install -g npm@${{ matrix.node-version }}
+    - name: Use Node.js
+      run: npm install
     - name: Run CI
       run: npm ci
     - name: Build app
