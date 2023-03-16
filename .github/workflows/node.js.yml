@@ -47,10 +47,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      run: |
-        npm install -g n
-        n ${{ matrix.node-version }}
-      shell: bash
+      run: npm install -g npm@${{ matrix.node-version }}
     - name: Run CI
       run: npm ci
     - name: Build app
