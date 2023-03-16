@@ -1,3 +1,4 @@
+[![Deploy to Firebase](https://github.com/yairkl/reactWithWorkflow/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/yairkl/reactWithWorkflow/actions/workflows/firebase-hosting-merge.yml)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
