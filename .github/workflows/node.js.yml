@@ -47,11 +47,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        working-directory: ./client
+      run: |
+        cd client
+        npm install -g n
+        n ${{ matrix.node-version }}
+      shell: bash
     - name: Run CI
       run: npm ci
     - name: Build app
